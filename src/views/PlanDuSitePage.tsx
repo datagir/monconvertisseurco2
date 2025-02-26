@@ -87,23 +87,6 @@ const PlanDuSitePage = () => {
             </Link>
           </li>
           <li>
-            <Link prefetch={false} href='/doc/livraison'>
-              Livraison
-            </Link>
-          </li>
-          <ul className={styles.row}>
-            <li>
-              <Link prefetch={false} href='/doc/livraison/livraison-colis'>
-                De colis
-              </Link>
-            </li>
-            <li>
-              <Link prefetch={false} href='/doc/livraison/livraison-colis-par-avion'>
-                De colis par avion
-              </Link>
-            </li>
-          </ul>
-          <li>
             <Link prefetch={false} href='/doc/questions-frequentes'>
               Questions fréquentes
             </Link>

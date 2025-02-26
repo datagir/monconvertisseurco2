@@ -1,3 +1,5 @@
+import { ReactNode } from 'react'
+
 type BaseEquivalent = {
   id?: string | number
   slug: string
@@ -6,6 +8,7 @@ type BaseEquivalent = {
   synonyms?: string[]
   withCarpool?: boolean
   carpool?: number
+  livraison?: boolean
   percentage?: boolean
   unit?: string
   sources?: {
@@ -91,7 +94,7 @@ export type Equivalent =
   | UsageNumeriqueEquivalent
   | FruitsEtLegumesEquivalent
 
-export type ComputedEquivalent = Equivalent & { value: number; initialValue?: number; link: string; name?: string }
+export type ComputedEquivalent = Equivalent & { value: number; initialValue?: number; link: string; name?: ReactNode }
 
 export type Language = 'en' | 'fr' | 'es'
 export type SimpleEquivalent = {

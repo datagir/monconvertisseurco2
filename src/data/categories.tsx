@@ -9,6 +9,7 @@ import { electromenager } from './categories/electromenager'
 import { flattenEquivalents } from './categories/flattenEquivalents'
 import { fruitsEtLegumes } from './categories/fruitsetlegumes'
 import { habillements } from './categories/habillement'
+import { livraison } from './categories/livraison'
 import { mobiliers } from './categories/mobilier'
 import { numeriques } from './categories/numerique'
 import { repas } from './categories/repas'
@@ -47,7 +48,7 @@ export const categories: Category[] = [
     name: 'Livraison',
     tool: 'Impact Livraison',
     slug: 'livraison',
-    description: "Mesurer l'impact carbone de la livraison de colis",
+    description: "Comparer l'impact carbone des modes d'achat",
     unit: '',
     sources: [
       {
@@ -55,6 +56,7 @@ export const categories: Category[] = [
         href: 'https://librairie.ademe.fr/mobilite-et-transport/6261-commerce-en-ligne-impacts-environnementaux-de-la-logistique-des-transports-et-des-deplacements.html',
       },
     ],
+    equivalents: computedEquivalents('livraison', livraison),
   },
   {
     id: 8,

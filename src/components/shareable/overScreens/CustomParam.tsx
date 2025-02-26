@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import { useTranslations } from 'next-intl'
-import React, { Dispatch, SetStateAction } from 'react'
+import { Dispatch, SetStateAction } from 'react'
 import { Equivalent } from 'types/equivalent'
 import { deplacements } from 'data/categories/deplacement'
 import { AlimentationCategories } from 'utils/alimentation'
@@ -68,6 +68,9 @@ const configs: Record<
     max: 10000,
   },
   roundTrip: {
+    type: 'boolean',
+  },
+  withFabrication: {
     type: 'boolean',
   },
   month: {

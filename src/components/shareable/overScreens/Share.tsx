@@ -18,12 +18,14 @@ const Share = ({
   tracking,
   anchor,
   noLanguage,
+  extraKit,
 }: {
   category?: Pick<Category, 'slug' | 'name'>
   path?: string
   tracking?: string
   anchor?: string
   noLanguage?: boolean
+  extraKit?: string
 }) => {
   const allParams = useParamContext()
   const [visibility, setVisibility] = useState<Record<string, boolean> | null>(null)
@@ -90,7 +92,7 @@ const Share = ({
             : `${process.env.NEXT_PUBLIC_IMAGE_URL}/api/dynamics/comparateur?${buildCustomParamsUrl(params, visibility)}&language=${allParams.language}`
         }
       />
-      <ShareKit />
+      <ShareKit extraKit={extraKit} />
     </>
   )
 }

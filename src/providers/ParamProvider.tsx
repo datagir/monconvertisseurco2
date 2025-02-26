@@ -8,6 +8,7 @@ import { SiteLanguage } from 'types/languages'
 import { TransportSimulateur } from 'types/transport'
 import { deplacements } from 'data/categories/deplacement'
 import { comparisons } from 'components/outils/TransportComparisonSimulator'
+import { LivraisonType } from 'components/outils/livraison/Type'
 import { displayAddress } from 'utils/address'
 import { AlimentationCategories } from 'utils/alimentation'
 import { slugs } from 'utils/months'
@@ -32,14 +33,6 @@ const usageNumeriqueDefaultValues = {
   ['visio . emplacements']: 2,
   ['visio . transmission . réseau']: "'fixe FR'",
   ['visio . qualité']: "'SD'",
-}
-
-const livraisonDefaultValues = {
-  produit: 'habillement',
-  retrait: 'point de retrait',
-  relay: 'voiture thermique',
-  km: '7',
-  traj: 'dom_tra',
 }
 
 const completeAddress = (setter: Dispatch<SetStateAction<Point | undefined>>, value?: string) => {
@@ -74,14 +67,6 @@ const getFloat = (query: ReadonlyURLSearchParams, key: string) => {
   return number
 }
 
-type LivraisonValues = {
-  produit: string
-  retrait: string
-  relay: string
-  km: string
-  traj: string
-}
-
 export type Params = {
   hideActions: boolean
   setHideActions: Dispatch<SetStateAction<boolean>>
@@ -100,18 +85,13 @@ export type Params = {
     setEquivalents: Dispatch<SetStateAction<string[]>>
   }
   livraison: {
-    values: LivraisonValues
-    setValues: Dispatch<SetStateAction<LivraisonValues>>
-    isHabit: boolean
-    setIsHabit: Dispatch<SetStateAction<boolean>>
-    isPlane: boolean
-    setIsPlane: Dispatch<SetStateAction<boolean>>
-    number: number
-    setNumber: Dispatch<SetStateAction<number>>
-    frequence: number
-    setFrequence: Dispatch<SetStateAction<number>>
-    equivalents: string[]
-    setEquivalents: Dispatch<SetStateAction<string[]>>
+    withFabrication: boolean
+    setWithFabrication: Dispatch<SetStateAction<boolean>>
+    distance: Record<string, number>
+    setDistance: Dispatch<SetStateAction<Record<string, number>>>
+    transport: Record<string, string>
+    setTransport: Dispatch<SetStateAction<Record<string, string>>>
+    types: LivraisonType[]
   }
   comparateur: {
     weight: number
@@ -245,12 +225,18 @@ export function ParamProvider({ children }: { children: ReactNode }) {
   const [alimentationEquivalents, setAlimentationEquivalents] = useState<string[]>([])
 
   // Livraison
-  const [livraisonValues, setLivraisonValues] = useState(livraisonDefaultValues)
-  const [livraisonEquivalents, setLivraisonEquivalents] = useState<string[]>([])
-  const [isHabit, setIsHabit] = useState(false)
-  const [isPlane, setIsPlane] = useState(false)
-  const [number, setNumber] = useState(1)
-  const [frequence, setFrequence] = useState<number>(12)
+  const [types, setTypes] = useState(Object.values(LivraisonType))
+  const [withFabrication, setWithFabrication] = useState(false)
+  const [distance, setDistance] = useState<Record<string, number>>({
+    pointrelais: 3,
+    magasin: 15,
+    clickcollect: 15,
+  })
+  const [transport, setTransport] = useState<Record<string, string>>({
+    pointrelais: 'voiturethermique',
+    magasin: 'voiturethermique',
+    clickcollect: 'voiturethermique',
+  })
 
   // Comparateur
   const [baseValue, setBaseValue] = useState(100)
@@ -526,6 +512,13 @@ export function ParamProvider({ children }: { children: ReactNode }) {
     }
 
     setUsageNumeriqueSituation(situation)
+
+    if (searchParams.get('withFabrication')) {
+      setWithFabrication(searchParams.get('withFabrication') === 'true')
+    }
+    if (searchParams.get('types')) {
+      setTypes((searchParams.get('types') as string).split(',') as LivraisonType[])
+    }
   }, [searchParams])
 
   return (
@@ -548,18 +541,13 @@ export function ParamProvider({ children }: { children: ReactNode }) {
           setEquivalents: setAlimentationEquivalents,
         },
         livraison: {
-          values: livraisonValues,
-          setValues: setLivraisonValues,
-          equivalents: livraisonEquivalents,
-          setEquivalents: setLivraisonEquivalents,
-          isHabit,
-          setIsHabit,
-          isPlane,
-          setIsPlane,
-          number,
-          setNumber,
-          frequence,
-          setFrequence,
+          withFabrication,
+          setWithFabrication,
+          distance,
+          setDistance,
+          transport,
+          setTransport,
+          types,
         },
         comparateur: {
           weight: comparedEquivalent ? comparedEquivalent.value / (comparedEquivalent.percentage ? 100 : 1) : 1,

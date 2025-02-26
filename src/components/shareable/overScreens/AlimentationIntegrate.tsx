@@ -11,8 +11,8 @@ import IntegratePreview from './IntegratePreview'
 import shareStyles from './Share.module.css'
 
 const AlimentationIntegrate = () => {
-  const t = useTranslations('alimentation.integrate')
-  const { theme, language, alimentation: alimentationParams } = useParamContext()
+  const t = useTranslations('overscreen')
+  const { theme, language, setTheme, setLanguage, alimentation: alimentationParams } = useParamContext()
 
   const [showButtons, setShowButtons] = useState(true)
   const [category, setCategory] = useState(alimentationParams.category)
@@ -45,7 +45,7 @@ const AlimentationIntegrate = () => {
         />
         <div className={shareStyles.separator} />
         <fieldset>
-          <legend className={styles.title}>{t('customList')}</legend>
+          <legend className={styles.title}>{t('customList.description')}</legend>
           <CustomParam
             tracking='Alimentation'
             slug='customList'
@@ -57,7 +57,7 @@ const AlimentationIntegrate = () => {
         </fieldset>
         <div className={shareStyles.separator} />
         <fieldset>
-          <legend className={styles.title}>{t('hideButtons')}</legend>
+          <legend className={styles.title}>{t('hideButtons.description')}</legend>
           <CustomParam
             tracking='Alimentation'
             slug='hideButtons'
@@ -66,6 +66,19 @@ const AlimentationIntegrate = () => {
             param={{ value: showButtons, setter: setShowButtons } as CustomParamValue}
           />
         </fieldset>
+        <div className={shareStyles.separator} />
+        <CustomParam
+          tracking='Livraison'
+          slug='theme'
+          param={{ value: theme, setter: setTheme } as CustomParamValue}
+          visible
+        />
+        <CustomParam
+          tracking='Livraison'
+          slug='language'
+          param={{ value: language, setter: setLanguage } as CustomParamValue}
+          visible
+        />
       </form>
       <ClipboardBox
         form='alimentation-integrate'

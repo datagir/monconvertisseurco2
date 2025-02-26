@@ -93,6 +93,7 @@ export const getNameWithoutSuffix = (
       .replace(/\bter\b/i, 'TER')
       .replace(/\bgame of\b/i, 'Game of')
       .replace(/a\/r/i, 'A/R')
+      .replace(/\bclick\b/i, 'Click')
   } else {
     return `${nameWithoutSuffix[0].toUpperCase()}${nameWithoutSuffix.slice(1)}`
   }

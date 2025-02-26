@@ -1,5 +1,8 @@
 .kit {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .kitTitle {
@@ -9,7 +12,7 @@
   font-weight: 500;
   line-height: 1.5rem;
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .separatorBothBorders {

@@ -1,0 +1,32 @@
+.select {
+  select {
+    max-width: 100%;
+    color: var(--neutral-70) !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    font-weight: 500 !important;
+  }
+}
+
+.checkBox {
+  width: 100%;
+}
+
+.withBorder {
+  border-bottom: solid 2px var(--primary-30);
+}
+
+.green,
+.gray {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+
+.green {
+  color: var(--success-60);
+}
+
+.gray {
+  color: var(--neutral-60);
+}

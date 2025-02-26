@@ -1,0 +1,72 @@
+.green,
+.gray {
+  font-weight: 400;
+}
+
+.green {
+  color: var(--success-60);
+}
+
+.gray {
+  color: var(--neutral-60);
+}
+
+.container {
+  list-style: none;
+  padding: 1.125rem 1rem 1rem 1rem;
+  display: flex;
+  gap: 0.5rem;
+  color: var(--neutral-70);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+
+  &:hover {
+    background: var(--primary-10);
+
+    .value {
+      color: var(--primary-60);
+    }
+  }
+}
+
+.static {
+  border-top: 2px solid var(--primary-30);
+}
+
+.info {
+  width: 100%;
+}
+
+.barContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.bar {
+  height: 0.5rem;
+  border-radius: 1rem;
+  border: 2px solid var(--primary-40);
+  background: var(--primary-30);
+}
+
+.greenBar {
+  border-color: var(--success-40);
+  background: var(--success-20);
+}
+
+.plainBar {
+  border-color: var(--primary-60);
+  background: var(--primary-40);
+}
+
+.value {
+  color: var(--primary-50);
+  font-size: 0.625rem;
+  font-weight: 500;
+  line-height: 1rem;
+}

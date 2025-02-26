@@ -46,6 +46,12 @@ const values: Record<string, (params: Params) => Record<string, CustomParamValue
       },
     }
   },
+  livraison: (params: Params) => ({
+    withFabrication: {
+      value: params.livraison.withFabrication,
+      setter: params.livraison.setWithFabrication,
+    } as CustomParamValue,
+  }),
 }
 
 export const getCustomParams = (slug: string, params: Params) => {

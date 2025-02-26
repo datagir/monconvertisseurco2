@@ -1,5 +1,4 @@
 import { ReactNode } from 'react'
-import { LivraisonProvider } from 'src/providers/LivraisonProvider'
 import { UsageNumeriqueProvider } from 'src/providers/UsageNumeriqueProvider'
 import { computedEquivalents } from 'data/categories/computedEquivalents'
 import { repas } from 'data/categories/repas'
@@ -8,8 +7,8 @@ import FruitsEtLegumesSimulator from 'components/outils/FruitsEtLegumesSimulator
 import TransportSimulator from 'components/outils/TransportSimulator'
 import AlimentationSimulator from './AlimentationSimulator'
 import CategorySimulator from './CategorySimulator'
-import LivraisonSimulator from './LivraisonSimulator'
 import TeletravailSimulator from './TeletravailSimulator'
+import LivraisonSimulator from './livraison/LivraisonSimulator'
 import OsezChangerSimulator from './osezChanger/OsezChangerSimulator'
 import UsageNumeriqueSimulator from './usageNumerique/UsageNumeriqueSimulator'
 
@@ -24,11 +23,7 @@ export const simulators: Record<string, ReactNode> = {
       <UsageNumeriqueSimulator />
     </UsageNumeriqueProvider>
   ),
-  livraison: (
-    <LivraisonProvider>
-      <LivraisonSimulator />
-    </LivraisonProvider>
-  ),
+  livraison: <LivraisonSimulator />,
 }
 
 export const extraSimulators: Record<

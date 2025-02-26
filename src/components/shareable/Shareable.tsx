@@ -28,7 +28,7 @@ type ShareableProps = {
   withoutIntegration?: boolean
   withoutShare?: boolean
   overScreens?: Record<string, OverScreenInfo>
-  secondary?: string
+  secondary?: ReactNode
   noBottomBorders?: boolean
   small?: boolean
   smallPadding?: boolean
@@ -159,7 +159,8 @@ const Shareable = ({
           className={classNames(secondary !== undefined ? styles.secondaryContainer : '', {
             [styles.smallPadding]: smallPadding,
           })}>
-          {secondary && <h3 className={styles.secondaryText}>{secondary}</h3>}
+          {secondary &&
+            (typeof secondary === 'string' ? <h3 className={styles.secondaryText}>{secondary}</h3> : secondary)}
           <div
             ref={secondary !== undefined ? ref : undefined}
             className={secondary !== undefined ? styles.secondaryContent : ''}>

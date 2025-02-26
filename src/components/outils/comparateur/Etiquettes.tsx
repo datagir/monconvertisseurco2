@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import { useMemo } from 'react'
 import Shareable from 'components/shareable/Shareable'
 import { overScreenComparateurEtiquettesValues } from 'components/shareable/overScreens/Values'
 import EtiquetteSimulator from './EtiquetteSimulator'

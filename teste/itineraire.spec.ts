@@ -46,7 +46,7 @@ test('Default parameters (old way)', async ({ page }) => {
     })
     await expect(page.getByTestId('category-intercites')).toBeAttached()
     await expect(page.getByTestId('category-intercites')).toHaveText(
-      'Intercités  - 91.2 km0.82 kg CO₂eusage : 65% et construction : 35%'
+      'Intercités  - 91.2 km0.82 kg CO₂eusage : 65%, construction : 35%'
     )
   })
 })
@@ -85,7 +85,7 @@ test('Default parameters', async ({ page }) => {
     })
     await expect(page.getByTestId('category-intercites')).toBeAttached()
     await expect(page.getByTestId('category-intercites')).toHaveText(
-      'Intercités  - 91.2 km0.82 kg CO₂eusage : 65% et construction : 35%'
+      'Intercités  - 91.2 km0.82 kg CO₂eusage : 65%, construction : 35%'
     )
   })
 })
@@ -112,7 +112,7 @@ test('Load correct number of tabs and redirect with params', async ({ page }) =>
 
     await expect(page.getByTestId('category-busthermique')).toBeAttached()
     await expect(page.getByTestId('category-busthermique')).toHaveText(
-      'Bus thermique1.36 kg CO₂eusage : 92% et construction : 8%'
+      'Bus thermique1.36 kg CO₂eusage : 92%, construction : 8%'
     )
   })
 })
@@ -130,14 +130,14 @@ test('Roundtrip', async ({ page }) => {
 
   await expect(page.getByTestId('category-intercites')).toBeAttached()
   await expect(page.getByTestId('category-intercites')).toHaveText(
-    'Intercités  - 91.2 km0.82 kg CO₂eusage : 65% et construction : 35%'
+    'Intercités  - 91.2 km0.82 kg CO₂eusage : 65%, construction : 35%'
   )
   await expect(page.getByTestId('category-tgv')).not.toBeAttached()
 
   await page.getByTestId('checkbox-roundTrip').check()
   await expect(page.getByTestId('category-intercites')).toBeAttached()
   await expect(page.getByTestId('category-intercites')).toHaveText(
-    'Intercités  - 182 km1.64 kg CO₂eusage : 65% et construction : 35%'
+    'Intercités  - 182 km1.64 kg CO₂eusage : 65%, construction : 35%'
   )
   await expect(page.getByTestId('category-tgv')).not.toBeAttached()
 
@@ -156,14 +156,14 @@ test('Roundtrip', async ({ page }) => {
   )
   await page.getByTestId('cancel-button').click()
   await expect(page.getByTestId('category-intercites')).toHaveText(
-    'Intercités  - 182 km1.64 kg CO₂eusage : 65% et construction : 35%'
+    'Intercités  - 182 km1.64 kg CO₂eusage : 65%, construction : 35%'
   )
 
   await page.goto(
     'http://localhost:3000/outils/transport/itineraire?itineraireStart=Nantes 44000 France&itineraireEnd=Angers 49000 France&roundTrip=true&defaultMode=list&language=fr'
   )
   await expect(page.getByTestId('category-intercites')).toHaveText(
-    'Intercités  - 182 km1.64 kg CO₂eusage : 65% et construction : 35%',
+    'Intercités  - 182 km1.64 kg CO₂eusage : 65%, construction : 35%',
     {
       timeout: 10000,
     }

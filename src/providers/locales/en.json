@@ -76,6 +76,9 @@
     "kitTitle": "Communication kit",
     "kitDescription": "Everything you need to communicate on Impact CO₂",
     "kitLink": "Consult",
+    "livraisonKitTitle": "Comm’ kit for Impact Livraison",
+    "livraisonKitDescription": "To make things easier for you, we have put together ready-to-use visuals to communicate about Impact Livraison",
+    "livraisonKitLink": "Download",
     "integrate": "Integrate",
     "preview": "Preview the integration",
     "next-actions": "Explore further",
@@ -94,11 +97,20 @@
       "rayon": "Store sections",
       "popularity": "Top 10"
     },
+    "withFabrication": {
+      "title": "Include manufacturing impact by default",
+      "description": "Impact of manufacturing"
+    },
+    "customFabricationList": {
+      "description": "Customize the list of suggested items"
+    },
     "customList": {
-      "title": "Create a custom food list"
+      "title": "Create a custom food list",
+      "description": "Custom list"
     },
     "hideButtons": {
-      "title": "Show buttons at the bottom of my integration"
+      "title": "Show buttons at the bottom of my integration",
+      "description": "Show buttons"
     },
     "m2": {
       "title": "Display a custom surface",
@@ -234,9 +246,16 @@
   "category-simulator": {
     "passenger": "passenger[s]",
     "in": "in",
+    "distance": "Distance traveled for",
+    "voiturethermique": "Thermal car",
+    "voitureelectrique": "Electric car",
+    "transportSelect": "Transport used to pick up the object",
     "legend": {
       "construction": "Construction",
-      "usage": "Use"
+      "usage": "Usage",
+      "logistique": "Logistics / Delivery",
+      "deplacement": "My displacement",
+      "fabrication": "Manufacture"
     },
     "vetement": {
       "display": "See every clothes",
@@ -278,38 +297,21 @@
     }
   },
   "livraison": {
-    "produit": "You order...",
-    "grande consommation": "Consumer products (food, groceries, drinks...)",
-    "habillement": "Clothing (clothes, shoes, accessories...)",
-    "culturel": "Cultural products (CDs, books, DVDs...)",
-    "équipements volumineux": "Furniture and large appliances",
-    "retrait": "That you have delivered to...",
-    "domicile": "Home delivery",
-    "point de retrait": "Pick-up point",
-    "click and collect": "Click & collect",
-    "point-de-retrait": "The pick-up point",
-    "click-and-collect": "Click & collect",
-    "trajet": "Is it on your usual route?",
-    "yes": "Yes",
-    "plane": "Your order comes from far away",
-    "yes-plane": "Yes (air transport)",
-    "no": "No",
-    "km": "To go to the pick-up point, you travel...",
-    "voiture thermique": "By car",
-    "voiture électrique": "By electric car",
-    "marche": "On foot",
-    "vélo": "By bike",
-    "petit véhicule électrique": "By electric bike",
-    "commun": "By public transport",
-    "generate": "THE DELIVERY OF YOUR PACKAGE GENERATES",
-    "total": "THIS EQUALS..",
-    "mean": "On average, you place this type of order...",
-    "mean-unit": "time[s]",
-    "1": "Per year",
-    "12": "Per month",
-    "52": "Per week",
-    "habits": "YOUR DELIVERY HABITS GENERATE",
-    "year": "Per year"
+    "title": "Choose an object to discover the carbon impact of different purchasing methods",
+    "courses": "Food shopping",
+    "chaussure": "Pair of shoes",
+    "livre": "Books",
+    "microondes": "Microwave",
+    "vetements": "Ordering clothes",
+    "lavelinge": "Washing machine",
+    "lit": "Complete bed",
+    "smartphone": "Smartphone",
+    "vin": "Case of wine",
+    "cafetiere": "Espresso coffee maker",
+    "fabrication": "Include the impact of manufacturing the object",
+    "car": "I'm going by car",
+    "foot": "I'm going on foot",
+    "etiquette": "What is the <important>carbon impact</important> of different purchasing methods?"
   },
   "usage-numerique": {
     "title": "Compare the impact of your usages with the impact of construction",
@@ -414,7 +416,14 @@
         "camping": "Includes the construction and energy consumption of infrastructure (showers, sanitary facilities, and lighting).",
         "location": "Includes emissions related to energy consumption (heating, electricity, hot water), infrastructure (construction), and maintenance services.",
         "residencesecondaire": "Includes emissions related to energy consumption (heating, electricity, hot water), infrastructure (construction), and maintenance services.",
-        "2050": "The average French person emits nearly 9.3 tonnes of CO2 per year. To limit climate change, it is essential to reduce these emissions and achieve a maximum target of 2 tonnes of CO2e per person per year by 2050."
+        "2050": "The average French person emits nearly 9.3 tonnes of CO2 per year. To limit climate change, it is essential to reduce these emissions and achieve a maximum target of 2 tonnes of CO2e per person per year by 2050.",
+        "magasin": "For a 1 kg package.",
+        "magasindouce": "For a 1 kg package.",
+        "pointrelais": "For a 1 kg package.",
+        "pointrelaisdouce": "For a 1 kg package.",
+        "clickcollect": "For a 1 kg package.",
+        "clickcollectdouce": "For a 1 kg package.",
+        "livraisondomicile": "For a 1 kg package."
       },
       "post": {
         "ski": "Includes: the carbon impact of transportation (52%), accommodation (4%), food (8%), ski area (3%), infrastructure, equipment, and services (17%), and gear (16%).",
@@ -482,7 +491,12 @@
       "50": "Energy consumption",
       "51": "Maintenance services",
       "52": "Staff commuting",
-      "53": "Infrastructure construction"
+      "53": "Infrastructure construction",
+      "54": "Order & Preparation",
+      "55": "Storage & Transit",
+      "56": "My trip to 3km round trip",
+      "57": "My trip to 7km round trip",
+      "58": "My trip to 30km round trip"
     }
   },
   "category": {
@@ -563,10 +577,6 @@
     "boulangerie": "Bakery",
     "epiceriesalee": "Savory groceries",
     "epiceriesucree": "Sweet groceries",
-    "select": "select all",
-    "integrate": {
-      "customList": "Custom list",
-      "hideButtons": "Show buttons"
-    }
+    "select": "select all"
   }
 }

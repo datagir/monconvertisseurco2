@@ -1,0 +1,50 @@
+.progress {
+  visibility: hidden;
+}
+
+.button {
+  position: absolute;
+  background-color: transparent;
+  right: 5.5rem;
+  bottom: 0;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem 0rem 0rem 0rem;
+  color: var(--primary-60);
+  border-top: 2px solid var(--primary-30);
+  border-left: 2px solid var(--primary-30);
+  line-height: 1;
+  height: 1.375rem;
+  font-size: 0.75rem;
+
+  svg {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
+  &:hover {
+    background: var(--primary-20);
+    color: var(--primary-70);
+  }
+
+  &:active {
+    color: var(--primary-80);
+  }
+}
+
+.border {
+  width: 100%;
+  position: absolute;
+  height: 2px;
+  background-color: var(--primary-30);
+  bottom: -2px;
+  left: 0;
+}
+
+.progressBar {
+  position: absolute;
+  height: 2px;
+  background-color: var(--primary-50);
+  bottom: -2px;
+  left: 0;
+}

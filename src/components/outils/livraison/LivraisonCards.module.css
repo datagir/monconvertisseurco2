@@ -1,0 +1,9 @@
+.tools {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  @media screen and (max-width: 29.875rem) {
+    flex-direction: column;
+  }
+}

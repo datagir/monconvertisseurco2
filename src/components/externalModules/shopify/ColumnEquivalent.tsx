@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Language } from 'types/equivalent'
 import { getNumberPrecision } from 'utils/formatNumberPrecision'
 import LocalNumber from 'components/base/LocalNumber'
@@ -77,11 +77,7 @@ const ColumnEquivalent = ({
               <li
                 key={comparison}
                 className={
-                  isAnimated
-                    ? index === toDisplay && !fadeIn
-                      ? styles.visibleAnimatedComparison
-                      : styles.animatedComparison
-                    : styles.comparison
+                  index === toDisplay && !fadeIn ? styles.visibleAnimatedComparison : styles.animatedComparison
                 }>
                 <SimpleValue value={preciseValue} comparison={comparison} language={language} />
               </li>

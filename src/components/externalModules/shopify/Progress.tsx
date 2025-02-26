@@ -1,5 +1,4 @@
-import { useTranslations } from 'next-intl'
-import React, { Dispatch, SetStateAction, useCallback, useEffect, useRef, useState } from 'react'
+import { Dispatch, SetStateAction, useCallback, useEffect, useRef, useState } from 'react'
 import PauseIcon from 'components/base/icons/pause'
 import PlayIcon from 'components/base/icons/play'
 import styles from './Progress.module.css'

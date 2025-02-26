@@ -3,6 +3,12 @@ import DetectorScript from 'components/outils/DetectorScript'
 
 export const tools = [
   {
+    slug: 'livraison',
+    title: 'Livraison',
+    description: 'Simuler l’impact carbone de vos livraisons de colis',
+    linkLabel: 'Découvrir',
+  },
+  {
     slug: 'alimentation',
     title: 'Alimentation',
     description: 'Comparer l’empreinte carbone des aliments',
@@ -74,12 +80,6 @@ export const tools = [
     title: 'Usage numérique',
     description: 'Évaluer l’impact carbone des usages numériques',
     linkLabel: 'Visualiser',
-  },
-  {
-    slug: 'livraison',
-    title: 'Livraison',
-    description: 'Simuler l’impact carbone de vos livraisons de colis',
-    linkLabel: 'Découvrir',
   },
   {
     slug: 'teletravail',

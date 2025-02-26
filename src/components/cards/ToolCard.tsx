@@ -2,7 +2,7 @@
 
 import classNames from 'classnames'
 import Image from 'next/image'
-import React, { ReactNode, useMemo } from 'react'
+import { ReactNode, useMemo } from 'react'
 import { track } from 'utils/matomo'
 import IframeableLink from 'components/base/IframeableLink'
 import FullArrowRightIcon from 'components/base/icons/full-arrow-right'
@@ -56,7 +56,7 @@ const ToolCard = ({ slug, title, description, linkLabel, horizontal, link, image
         <Image src={image || `/images/tools-${slug}.svg`} width={220} height={180} alt='' />
         <div className={styles.content}>
           <div>
-            <div className={styles.title}>{title}</div>
+            <p className={styles.title}>{title}</p>
             {typeof description === 'string' ? <p>{description}</p> : <div>{description}</div>}
           </div>
           <div className={styles.link}>

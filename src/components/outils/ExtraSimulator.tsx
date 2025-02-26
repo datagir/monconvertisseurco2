@@ -1,6 +1,6 @@
 'use client'
 
-import { ReactNode, useEffect, useMemo } from 'react'
+import { ReactNode, useMemo } from 'react'
 import Block from 'components/layout/Block'
 import Shareable from 'components/shareable/Shareable'
 import { overScreenCategoryValues, overScreenOsezChangerValues } from 'components/shareable/overScreens/Values'
@@ -27,16 +27,6 @@ const ExtraSimulator = ({
         : overScreenCategoryValues({ id: 2, unit: simulator.slug, slug: simulator.slug, name: simulator.tracking }),
     [simulator]
   )
-
-  useEffect(() => {
-    if (window && window.location.hash) {
-      const anchor = window.location.hash.replace('#', '')
-      const element = document.getElementById(anchor)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
-      }
-    }
-  }, [])
 
   const component = (
     <Shareable slug={simulator.slug} tracking={simulator.tracking} overScreens={overScreens} small={simulator.small}>

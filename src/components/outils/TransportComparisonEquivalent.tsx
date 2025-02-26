@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
-import React, { useMemo } from 'react'
+import { useMemo } from 'react'
 import useParamContext from 'src/providers/ParamProvider'
 import { computedEquivalents } from 'src/providers/equivalents'
 import { ComputedEquivalent } from 'types/equivalent'
@@ -37,7 +37,7 @@ const getEquivalent = (language: string, equivalents: ComputedEquivalent[], slug
 
     return {
       ...equivalent,
-      name: (equivalent.name || '').replace(oldName, newName),
+      name: (typeof equivalent.name === 'string' ? equivalent.name : '').replace(oldName, newName),
       carpool: Number(carpool),
       value: (equivalent.initialValue || equivalent.value) / (Number(carpool) + 1),
       link: `${equivalent.link}+${carpool}`,

@@ -32,7 +32,6 @@
   overflow: hidden;
   background-color: var(--neutral-10);
   width: 8rem;
-  height: 6rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,7 +40,12 @@
   min-width: 8rem;
 
   img {
-    border-radius: 1rem 0 0 1rem;
+    border-radius: cal(1rem - 2px) 0 0 cal(1rem - 2px);
+  }
+
+  @media screen and (max-width: 29.875rem) {
+    width: 6rem;
+    min-width: 6rem;
   }
 }
 
@@ -50,6 +54,16 @@
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.75rem;
+
+  @media screen and (max-width: 48rem) {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+
+  @media screen and (max-width: 29.875rem) {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
 }
 
 .fakeLink {

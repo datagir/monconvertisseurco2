@@ -90,6 +90,37 @@ const Outils = () => {
               </>
             ),
           },
+          {
+            ...(tools.find((tool) => tool.slug === 'livraison') as ToolCardProps),
+            title: 'Découvrez le nouvel Impact Livraison !',
+            linkLabel: 'Découvrir',
+            description: (
+              <>
+                <div className={styles.descriptionLine}>
+                  <div className={styles.icons}>
+                    <div className={styles.shape}>
+                      <SimpleStarShapeIcon />
+                    </div>
+                    <div className={styles.check}>
+                      <CheckIcon />
+                    </div>
+                  </div>
+                  <p>Comparer les modes de livraison avec l’achat en magasin</p>
+                </div>
+                <div className={styles.descriptionLine}>
+                  <div className={styles.icons}>
+                    <div className={styles.shape}>
+                      <SimpleStarShapeIcon />
+                    </div>
+                    <div className={styles.check}>
+                      <CheckIcon />
+                    </div>
+                  </div>
+                  <p>Un nouveau format étiquette encore plus facile à intégrer</p>
+                </div>
+              </>
+            ),
+          },
         ]}
       />
       <Block
