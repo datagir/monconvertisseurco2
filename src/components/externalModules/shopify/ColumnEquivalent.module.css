@@ -28,7 +28,6 @@
 
 .animatedComparisonsColumn {
   display: grid;
-  grid-template: 1 / fr / 1fr;
 }
 
 .visibleAnimatedComparison,

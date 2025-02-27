@@ -9,6 +9,7 @@ import { electromenager } from 'data/categories/electromenager'
 import { flattenEquivalents } from 'data/categories/flattenEquivalents'
 import { fruitsEtLegumes } from 'data/categories/fruitsetlegumes'
 import { habillements } from 'data/categories/habillement'
+import { livraison } from 'data/categories/livraison'
 import { mobiliers } from 'data/categories/mobilier'
 import { numeriques } from 'data/categories/numerique'
 import { repas } from 'data/categories/repas'
@@ -28,6 +29,7 @@ export const computedEquivalents = [
   ...chauffage,
   ...fruitsEtLegumes,
   ...casPratiques,
+  ...livraison,
 ].map((equivalent) => ({
   ...equivalent,
   link: `/outils/${categories.find((category) => category.id === equivalent.category)?.slug}/${equivalent.slug}`,

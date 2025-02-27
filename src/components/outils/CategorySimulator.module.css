@@ -66,24 +66,35 @@
   font-weight: 700;
   line-height: 1.25rem;
   width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
-.usage,
-.construction,
 .fullBar {
-  display: inline-block;
   height: 1rem;
   border-radius: 1rem;
   border: 2px solid var(--primary-60);
-  background: var(--primary-40);
-  margin-right: 0.5rem;
   overflow: hidden;
+  display: flex;
+  > div:not(:last-child) {
+    border-right: 2px solid var(--primary-60);
+  }
 }
 
-.usage,
-.halfBar {
-  height: calc(1rem - 4px);
-  border-radius: 1rem 0 0 1rem;
+.stripped,
+.plain,
+.gray {
+  height: 100%;
+  display: inline-block;
+}
+
+.plain {
+  background-color: var(--primary-40);
+  flex: 1;
+}
+
+.stripped {
   background-image: repeating-linear-gradient(
     -45deg,
     var(--neutral-00),
@@ -93,11 +104,8 @@
   );
 }
 
-.construction,
-.usage {
-  height: 1rem;
-  border-radius: 1rem;
-  width: 1.5rem;
+.gray {
+  background-color: #9ec9c8;
 }
 
 .value {
@@ -155,6 +163,15 @@
   border-top: 2px solid var(--primary-30);
 }
 
+.legendBar {
+  height: 1rem;
+  border-radius: 1rem;
+  border: 2px solid var(--primary-60);
+  margin-right: 0.5rem;
+  width: 1.5rem;
+  max-width: 1.5rem;
+}
+
 .carpool {
   position: absolute;
   top: 0.25rem;
@@ -202,5 +219,39 @@
 
   @media screen and (max-width: 48rem) {
     display: block;
+  }
+}
+
+.transport {
+  display: flex;
+  align-items: center;
+}
+
+.select {
+  select {
+    height: 2rem;
+    min-width: 3.5rem;
+    max-width: 3.5rem;
+    padding: 0 1rem 0 0.75rem;
+    background-repeat: no-repeat;
+    background-position: left 0.5rem center;
+    color: transparent;
+    border-radius: 0.25rem;
+    border: 2px solid var(--primary-30);
+  }
+
+  &::before {
+    top: 0.25rem !important;
+    right: 0.5rem !important;
+    color: var(--primary-50);
+  }
+
+  @media screen and (max-width: 29.875rem) {
+    select {
+      height: 2.5rem;
+    }
+    &::before {
+      top: 0.5rem !important;
+    }
   }
 }

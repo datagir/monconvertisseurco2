@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import { Suspense } from 'react'
 import Link from 'components/base/buttons/Link'
 import ToolCard from 'components/cards/ToolCard'
 import ToolCards from 'components/cards/ToolCards'
@@ -18,9 +18,9 @@ const Home = () => {
         <h1 className={styles.title}>Les bons outils pour communiquer sur l’impact carbone</h1>
         <ToolCards
           tools={[
+            tools.find((tool) => tool.slug === 'livraison'),
             tools.find((tool) => tool.slug === 'alimentation'),
             quiz,
-            tools.find((tool) => tool.slug === 'comparateur'),
           ]}
         />
         <div className={styles.link}>

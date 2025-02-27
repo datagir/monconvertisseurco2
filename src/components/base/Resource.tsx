@@ -2,7 +2,6 @@
 
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import React from 'react'
 import { track } from 'utils/matomo'
 import IframeableLink from './IframeableLink'
 import NewTabIcon from './NewTabIcon'
@@ -39,7 +38,7 @@ const Resource = ({
           alt=''
           width={100}
           height={86}
-          style={{ width: imgSize || 'auto', height: imgSize || '100%' }}
+          style={{ width: imgSize || '100%', height: imgSize || 'auto' }}
         />
       </div>
       <div className={styles.content}>

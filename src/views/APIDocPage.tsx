@@ -1,6 +1,6 @@
 import classNames from 'classnames'
-import React from 'react'
-import SwaggerUI, { SwaggerUIProps } from 'swagger-ui-react'
+import SwaggerUI from 'swagger-ui-react'
+import SwaggerUIProps from 'swagger-ui-react/swagger-ui-react'
 import styles from './Page.module.css'
 
 const APIDocPage = ({ spec }: SwaggerUIProps) => {

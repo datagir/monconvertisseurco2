@@ -1,37 +1,37 @@
 {
   "quiz": {
-    "infography": "REVISAR LOS PEDIDOS DE TALLAS",
-    "hideAll": "Ocultar la lista de órdenes de magnitud",
-    "displayAll": "Mostrar todas las órdenes de magnitud",
-    "question": "Pregunta",
-    "previous": "Ant.",
-    "title": "Según tú, ¿qué tiene <important>menos</important> impacto en el clima?",
-    "tag": "Elige tu respuesta a continuación:",
-    "ou": "o",
-    "correct": "<important>¡Bien hecho!</important> ¡Eso es exactamente correcto!",
-    "missed": "<important>Fallaste...</important> La respuesta correcta era",
-    "more": "Leer más",
-    "less": "Reducir",
-    "next": "Siguiente pregunta",
-    "result": "Ver puntuación",
-    "finished": "¡Ha terminado!",
-    "score": "Has obtenido <important>{score} / 10</important> {score, plural, =1 {respuesta correcta} other {respuestas correctas}}!",
-    "restart": "Reiniciar",
-    "read-more": "APRENDE MÁS",
+    "infography": "REVIEW SIZE ORDERS",
+    "hideAll": "Hide the list of magnitudes",
+    "displayAll": "Show all magnitudes",
+    "question": "Question",
+    "previous": "Prev.",
+    "title": "According to you, what has <important>less</important> impact on the climate?",
+    "tag": "Choose your answer below:",
+    "ou": "or",
+    "correct": "<important>Well done!</important> That's exactly right!",
+    "missed": "<important>You missed...</important> The correct answer was",
+    "more": "Read more",
+    "less": "Reduce",
+    "next": "Next question",
+    "result": "See score",
+    "finished": "It's over!",
+    "score": "You got <important>{score} / 10</important> {score, plural, =1 {correct answer} other {correct answers}}!",
+    "restart": "Restart",
+    "read-more": "LEARN MORE",
     "boeuf-tgv": {
-      "line-1": "Para largas distancias, el TGV emite muchos menos gases de efecto invernadero que los coches de gasolina o los aviones. Por persona y por kilómetro, <important>los trenes contaminan 8 veces menos que los coches y 14 veces menos que los aviones.</important>",
-      "line-2": "El consumo de carne de res tiene un impacto significativo en el clima. De hecho, las emisiones de gases de efecto invernadero de una comida con carne de res son equivalentes a las de 14 comidas vegetarianas."
+      "line-1": "For long distances, the TGV emits much less greenhouse gases than gasoline cars or planes. Per person and per kilometer, <important>trains pollute 8 times less than cars and 14 times less than planes.</important>",
+      "line-2": "Beef consumption has a significant impact on the climate. In fact, the greenhouse gas emissions of a meal with beef are equivalent to those of 14 vegetarian meals."
     },
     "tablette-chaussures": {
-      "line-1": "El ciclo de vida de una tableta (desde su fabricación hasta su fin de vida) genera <important>4 veces más impacto</important> que el de un par de zapatos de cuero.",
-      "line-2": "Es la etapa de fabricación de los dispositivos digitales en general la que más pesa en su huella de carbono, mucho más que su uso. Por eso, <important>es importante conservar la tableta el mayor tiempo posible.</important>"
+      "line-1": "The life cycle of a tablet (from its manufacture to its end of life) generates <important>4 times more impact</important> than that of a pair of leather shoes.",
+      "line-2": "It is the manufacturing stage of digital devices in general that weighs the most in their carbon footprint, much more than their use. Therefore, <important>it is important to keep the tablet as long as possible.</important>"
     },
     "avocat-poisson": {
-      "line-1": "Hoy en día, el aguacate es a menudo criticado por su importante impacto ambiental. Los aguacates no se producen en Francia; se cultivan en países lejanos y requieren mucha agua para crecer.",
-      "line-2": "Sin embargo, la huella de carbono de 1 kg de aguacate es ligeramente inferior a la de una comida con pescado blanco."
+      "line-1": "Today, the avocado is often criticized for its significant environmental impact. Avocados are not produced in France; they are grown in distant countries and require a lot of water to grow.",
+      "line-2": "However, the carbon footprint of 1 kg of avocado is slightly lower than that of a meal with white fish."
     },
     "refrigirateur-ordinateur": {
-      "line-1": "Los electrodomésticos también tienen un fuerte impacto en el clima. Al igual que los dispositivos digitales, la etapa de fabricación es la parte más significativa de su huella de carbono."
+      "line-1": "Household appliances also have a strong impact on the climate. Like digital devices, the manufacturing stage is the most significant part of their carbon footprint."
     },
     "eau-the": {
       "line-1": "Beber un litro de agua embotellada tiene <important>6 veces más impacto</important> que beber un litro de té. ¿Por qué? Porque la producción del embalaje de plástico de la botella y su distribución a los diferentes puntos de venta aumentan significativamente su huella de carbono."
@@ -77,6 +77,9 @@
     "kitTitle": "Kit de comunicación",
     "kitDescription": "Todo lo que necesitas para comunicar sobre el impacto del CO₂",
     "kitLink": "Consultar",
+    "livraisonKitTitle": "Kit de comunicación para entrega de impacto",
+    "livraisonKitDescription": "Para facilitarle las cosas, hemos elaborado imágenes listas para usar para comunicar sobre Impact Livraison",
+    "livraisonKitLink": "Descargar",
     "preview": "Vista previa de la integración",
     "next-actions": "Siguientes acciones",
     "comparison": "Cambiar el modo de transporte comparar",
@@ -94,11 +97,20 @@
       "rayon": "Secciones de la tienda",
       "popularity": "Top 10"
     },
+    "withFabrication": {
+      "title": "Incluir el impacto de la fabricación por defecto",
+      "description": "Impacto de la fabricación"
+    },
+    "customFabricationList": {
+      "description": "Personaliza la lista de objetos propuestos"
+    },
     "customList": {
-      "title": "Crear una lista de alimentos personalizada"
+      "title": "Crea una lista de alimentos personalizada",
+      "description": "Lista personalizada"
     },
     "hideButtons": {
-      "title": "Mostrar botones en la parte inferior de mi integración"
+      "title": "Mostrar botones en la parte inferior de mi incrustación",
+      "description": "Visualización de botones"
     },
     "m2": {
       "title": "Mostrar una superficie personalizada",
@@ -234,9 +246,16 @@
   "category-simulator": {
     "passenger": "pasajero[s]",
     "in": "en",
+    "distance": "Distancia recorrida durante",
+    "voiturethermique": "Coche térmico",
+    "voitureelectrique": "Coche eléctrico",
+    "transportSelect": "Transporte utilizado para buscar el objeto",
     "legend": {
       "construction": "Construcción",
-      "usage": "Uso"
+      "usage": "Uso",
+      "logistique": "Logística / Entrega",
+      "deplacement": "Mi movimiento",
+      "fabrication": "fabricación"
     },
     "vetement": {
       "display": "Ver todas las prendas",
@@ -278,38 +297,21 @@
     }
   },
   "livraison": {
-    "produit": "Tú ordenas...",
-    "grande consommation": "Productos de gran consumo (alimentos, comestibles, bebidas...)",
-    "habillement": "Vestimenta (ropa, zapatos, accesorios...)",
-    "culturel": "Productos culturales (CD, libros, DVD...)",
-    "équipements volumineux": "Muebles y grandes electrodomésticos",
-    "retrait": "Que te entregan en...",
-    "domicile": "Entrega a domicilio",
-    "point de retrait": "Punto de recogida",
-    "click and collect": "Click & collect",
-    "point-de-retrait": "El punto de recogida",
-    "click-and-collect": "El click & collect",
-    "trajet": "¿Está en tu ruta habitual?",
-    "yes": "Sí",
-    "plane": "El paquete viene de lejos",
-    "yes-plane": "Sí (transporte por avión)",
-    "no": "No",
-    "km": "Para ir al punto de recogida, recorres...",
-    "voiture thermique": "En coche",
-    "voiture électrique": "En coche eléctrico",
-    "marche": "Caminando",
-    "vélo": "en bicicleta",
-    "petit véhicule électrique": "en bicicleta eléctrica",
-    "commun": "En transporte público",
-    "generate": "LA ENTREGA DE TU PAQUETE GENERA",
-    "total": "LO QUE CORRESPONDE A..",
-    "mean": "En promedio, haces este tipo de pedido...",
-    "mean-unit": "veces",
-    "1": "Por año",
-    "12": "Por mes",
-    "52": "Por semana",
-    "habits": "TUS HÁBITOS DE ENTREGA GENERAN",
-    "year": "Por año"
+    "title": "Elige un objeto para descubrir el impacto del carbono de diferentes métodos de compra",
+    "courses": "Compras de comida",
+    "chaussure": "Par de zapatos",
+    "livre": "Libros",
+    "microondes": "Microondas",
+    "vetements": "Pedir ropa",
+    "lavelinge": "Lavadora",
+    "lit": "Cama completa",
+    "smartphone": "teléfono inteligente",
+    "vin": "Caja de vino",
+    "cafetiere": "cafetera para café expreso",
+    "fabrication": "Incluir el impacto de la fabricación del objeto",
+    "car": "voy allí en coche",
+    "foot": "voy a pie",
+    "etiquette": "¿Cuál es el <important>impacto de carbono</important> de los diferentes métodos de compra?"
   },
   "usage-numerique": {
     "title": "Comparar el impacto de los usos con el impacto de la construcción",
@@ -414,7 +416,14 @@
         "camping": "Incluye la construcción y el consumo de energía de la infraestructura (duchas, instalaciones sanitarias e iluminación).",
         "location": "Incluye las emisiones relacionadas con el consumo de energía (calefacción, electricidad, agua caliente), la infraestructura (construcción) y los servicios de mantenimiento.",
         "residencesecondaire": "Incluye las emisiones relacionadas con el consumo de energía (calefacción, electricidad, agua caliente), la infraestructura (construcción) y los servicios de mantenimiento.",
-        "2050": "Un francés emite de media casi 9,3 toneladas de CO2 al año. Para limitar el cambio climático, es esencial reducir estas emisiones y alcanzar un objetivo máximo de 2 toneladas de CO2e por persona y año para 2050."
+        "2050": "Un francés emite de media casi 9,3 toneladas de CO2 al año. Para limitar el cambio climático, es esencial reducir estas emisiones y alcanzar un objetivo máximo de 2 toneladas de CO2e por persona y año para 2050.",
+        "magasin": "Para un paquete de un kilo.",
+        "magasindouce": "Para un paquete de un kilo.",
+        "pointrelais": "Para un paquete de un kilo.",
+        "pointrelaisdouce": "Para un paquete de un kilo.",
+        "clickcollect": "Para un paquete de un kilo.",
+        "clickcollectdouce": "Para un paquete de un kilo.",
+        "livraisondomicile": "Para un paquete de un kilo."
       },
       "post": {
         "ski": "Incluye: el impacto de carbono del transporte (52%), alojamiento (4%), alimentos (8%), la estación de esquí (3%), infraestructura, equipo y servicios (17%), y equipo (16%).",
@@ -482,7 +491,12 @@
       "50": "Consumo de energía",
       "51": "Servicios de mantenimiento",
       "52": "Desplazamiento del personal",
-      "53": "Construcción de infraestructuras"
+      "53": "Construcción de infraestructuras",
+      "54": "Pedido y Preparación",
+      "55": "Almacenamiento y Tránsito",
+      "56": "Mi desplazamiento a 3km ida y vuelta",
+      "57": "Mi desplazamiento a 7km ida y vuelta",
+      "58": "Mi desplazamiento a 30km ida y vuelta"
     }
   },
   "category": {
@@ -563,10 +577,6 @@
     "boulangerie": "Panadería",
     "epiceriesalee": "Comestibles salados",
     "epiceriesucree": "Comestibles dulces",
-    "select": "seleccionar todo",
-    "integrate": {
-      "customList": "Lista personalizada",
-      "hideButtons": "Mostrar botones"
-    }
+    "select": "seleccionar todo"
   }
 }
